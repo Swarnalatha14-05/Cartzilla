@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cartzilla</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+.nav-bar {
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 15px 20px;
+background-color: #fff;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.nav-bar h1 {
+font-size: 24px;
+font-weight: bold;
+color: #333;
+margin: 0;
+}
+
+.nav-bar i {
+font-size: 18px;
+color: #333;
+}
+.nav-bar input {
+width: 300px;
+padding: 10px;
+border: 1px solid #ccc;
+border-radius: 5px;
+font-size: 16px;
+margin-right: 15px;
+outline: none;
+}
+.nav-bar .delivery {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+.nav-bar .delivery h4 {
+font-size: 16px;
+font-weight: bold;
+color: #333;
+margin: 0;
+}
+.nav-bar .delivery h6 {
+font-size: 12px;
+color: #666;
+margin: 0;
+}
+.nav-bar .icons {
+display: flex;
+gap: 15px;
+}
+.nav-bar .icons i {
+font-size: 20px;
+}
+.search-bar {
+display: flex;
+align-items: center;
+background-color: #fff;
+border: 1px solid #ddd;
+border-radius: 30px;
+padding: 5px 10px;
+}
+.search-bar input {
+border: none;
+padding: 0;
+margin-right: 10px;
+}
+.search-bar i {
+font-size: 16px;
+color: #ddd;
+}
+
+.categories {
+  list-style-type: none;
+  padding: 0;
+  font-size: 14px;
+}
+.categories li {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+.categories img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+.product-card {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.product-card img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+.product-card .discount {
+  color: red;
+  font-size: 14px;
+}
+.product-card .old-price {
+  text-decoration: line-through;
+  font-size: 14px;
+  color: grey;
+}
+.product-card .price {
+  font-size: 18px;
+  font-weight: bold;
+}
+</style>
+</head>
+<body>
+  
+
+<div class="container-fluid">
+<!--Naviagtional bar-->
+<div class="nav-bar ">
+    <i class="fa-solid fa-bars"></i><h1>Cartzilla</h1>
+   
+        <div class="col-2">
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Categories
+                </button>
+            </div>
+        </div>
+   
+    <div class="search-bar">
+    <input type="text" placeholder="Search for products">
+    <i class="fa-solid fa-magnifying-glass"></i>
+   </div>
+
+    <div class="delivery">
+        <h4>Delivery</h4><h6>Set your address</h6>
+    </div>
+
+    <div class="icons">
+        <i class="fa-solid fa-gear"></i>
+        <i class="fa-regular fa-user"></i>
+        <i class="fa-solid fa-cart-shopping"></i>
+    </div>
+</div>
+
+<div class="container-fluid">
+  <div class="row mt-4">
+      <!-- Sidebar Categories -->
+      <div class="col-md-2">
+          <ul class="categories">
+              <li>
+                  <img src="images/bread.jpg" alt="Bakery">
+                  <div>Bakery & bread<br><small>230 products</small></div>
+              </li>
+              <li>
+                  <img src="images/vegetables.jpg" alt="veggies">
+                  <div>Vegetables<br><small>180 products</small></div>
+              </li>
+              <li>
+                 <img src="images/fruits.jpg" alt="fruits">
+                 <div>Fresh fruits<br><small>205 products</small></div>
+              </li>
+              <li>
+                  <img src="images/Italian.jpg" alt="italy">
+                  <div>Meet Italian dinner<br><small>309 products</small></div>
+              </li>
+              <li>
+                  <img src="images/drinks.jpg" alt="Beverages">
+                  <div>Beverages<br><small>372 products</small></div>
+              </li>
+              <li>
+                  <img src="images/meat-products.jpg" alt="meat">
+                  <div>Meat products<br><small>124 products</small></div>
+              </li>
+              <li>
+                  <img src="images/sauces-and-ketchups.jpg" alt="sauces">
+                  <div>Sauces and ketchup<br><small>219 products</small></div>
+              </li>
+              <li>
+                  <img src="images/dairy-and-eggs.jpg" alt="dairy">
+                  <div>Dairy and eggs<br><small>146 products</small></div>
+              </li>
+          </ul>
+      </div>
+
+      <!-- Product Cards -->
+      <div class="col-md-10">
+          <div class="row">
+              <div class="col-md-3">
+                  <div class="product-card">
+                      <img src="images/muesli.jpg" alt="Muesli Fitness Energy">
+                      <div class="price">$2.15</div>
+                      <div>Muesli Fitness Energy, gluten free</div>
+                      <div>500g</div>
+                  </div>
+              </div>
+              <div class="col-md-3">
+                  <div class="product-card">
+                      <div class="discount">-30%</div>
+                      <img src="images/oranges.jpg" alt="Fresh orange Klementina">
+                      <div class="price">$3.12</div>
+                      <div class="old-price">$4.05</div>
+                      <div>Fresh orange Klementina, Spain</div>
+                      <div>1kg</div>
+                  </div>
+              </div>
+              <div class="col-md-3">
+                  <div class="product-card">
+                      <img src="images/pepsi.jpg" alt="Pepsi soda classic">
+                      <div class="price">$0.80</div>
+                      <div>Pepsi soda classic, can</div>
+                      <div>330ml</div>
+                  </div>
+              </div>
+              <div class="col-md-3">
+                  <div class="product-card">
+                      <img src="images/cheese.jpg" alt="Mozzarella mini cheese Granarolo">
+                      <div class="price">$2.99</div>
+                      <div>Mozzarella mini cheese Granarolo</div>
+                      <div>250g</div>
+                  </div>
+              </div>
+              <div class="col-md-3">
+                  <div class="product-card">
+                      <img src="images/coconut.jpg" alt="Coconut">
+                      <div class="price">$1.24</div>
+                      <div>Coconut, Indonesia</div>
+                      <div>1 coconut</div>
+                  </div>
+              </div>
+              <div class="col-md-3">
+                  <div class="product-card">
+                      <img src="images/pesto.jpg" alt="Pesto sauce Barilla">
+                      <div class="price">$3.95</div>
+                      <div>Pesto sauce Barilla with parmesan and basil</div>
+                      <div>200g</div>
+                  </div>
+              </div>
+              <div class="col-md-3">
+                  <div class="product-card">
+                      <img src="images/mangoes.jpg" alt="Fresh mango">
+                      <div class="price">$1.99</div>
+                      <div>Fresh mango, Spain</div>
+                      <div>1 mango</div>
+                  </div>
+              </div>
+              <div class="col-md-3">
+                  <div class="product-card">
+                      <img src="images/asparagus.jpg" alt="Fresh green asparagus">
+                      <div class="price">$2.40</div>
+                      <div>Fresh green asparagus, bunch</div>
+                      <div>300g</div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
